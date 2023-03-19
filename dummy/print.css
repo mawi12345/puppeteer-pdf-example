@@ -1,0 +1,75 @@
+
+@page {
+  size: 210mm 297mm;
+}
+
+@media screen {
+
+  body {
+    background-color: #929292;
+  }
+  .page {
+    margin: 10mm;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
+html, body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  page-break-inside: avoid;
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: antiquewhite;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: bisque;
+  padding: 10mm 25mm;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: bisque;
+  padding: 10mm 25mm;
+}
+
+.content {
+  position: absolute;
+  left: 25mm;
+  right: 25mm;
+  top: 30mm;
+  bottom: 30mm;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 12mm;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
