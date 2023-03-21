@@ -4,6 +4,7 @@
   "main": "build/index.js",
   "license": "MIT",
   "dependencies": {
+    "pdf-lib": "^1.17.1",
     "puppeteer": "^19.7.5"
   },
   "devDependencies": {
