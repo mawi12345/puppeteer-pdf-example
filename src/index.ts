@@ -1,8 +1,11 @@
 import puppeteer from "puppeteer";
 import fs from "fs/promises";
 import { PDFDocument } from "pdf-lib";
+import { createServer } from "http-server";
 
 (async () => {
+  const server = createServer({ root: "./dummy" });
+  server.listen(8080);
   const url = "http://127.0.0.1:8080/";
   const browser = await puppeteer.launch({
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
@@ -27,6 +30,8 @@ import { PDFDocument } from "pdf-lib";
     omitBackground: true,
     printBackground: true,
   });
+
+  server.close();
 
   await page.close({ runBeforeUnload: false });
 

@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "main": "build/index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "watch": "tsc --watch"
+  },
   "dependencies": {
+    "http-server": "^14.1.1",
     "pdf-lib": "^1.17.1",
     "puppeteer": "^19.7.5"
   },
   "devDependencies": {
+    "@types/http-server": "^0.12.1",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
     "eslint": "^8.36.0",
